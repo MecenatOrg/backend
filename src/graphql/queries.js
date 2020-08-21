@@ -1,35 +1,69 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getCases = /* GraphQL */ `
-  query GetCases($id: ID!) {
-    getCases(id: $id) {
+export const getCase = /* GraphQL */ `
+  query GetCase($id: ID!) {
+    getCase(id: $id) {
       id
-      name
+      title
       description
-      logo {
-        bucket
-        region
-        key
-      }
+      variant
+      imgUrl
+      textPreview
       text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const listCasess = /* GraphQL */ `
-  query ListCasess(
-    $filter: ModelCasesFilterInput
+export const listCases = /* GraphQL */ `
+  query ListCases(
+    $filter: ModelCaseFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listCasess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listCases(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        title
+        description
+        variant
+        imgUrl
+        textPreview
+        text
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getTag = /* GraphQL */ `
+  query GetTag($id: ID!) {
+    getTag(id: $id) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listTags = /* GraphQL */ `
+  query ListTags(
+    $filter: ModelTagFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
-        description
-        text
         createdAt
         updatedAt
       }

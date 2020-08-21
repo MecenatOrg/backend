@@ -1,52 +1,94 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateCases = /* GraphQL */ `
-  subscription OnCreateCases {
-    onCreateCases {
+export const onCreateCase = /* GraphQL */ `
+  subscription OnCreateCase {
+    onCreateCase {
       id
-      name
+      title
       description
-      logo {
-        bucket
-        region
-        key
-      }
+      variant
+      imgUrl
+      textPreview
       text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateCases = /* GraphQL */ `
-  subscription OnUpdateCases {
-    onUpdateCases {
+export const onUpdateCase = /* GraphQL */ `
+  subscription OnUpdateCase {
+    onUpdateCase {
       id
-      name
+      title
       description
-      logo {
-        bucket
-        region
-        key
-      }
+      variant
+      imgUrl
+      textPreview
       text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteCases = /* GraphQL */ `
-  subscription OnDeleteCases {
-    onDeleteCases {
+export const onDeleteCase = /* GraphQL */ `
+  subscription OnDeleteCase {
+    onDeleteCase {
+      id
+      title
+      description
+      variant
+      imgUrl
+      textPreview
+      text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateTag = /* GraphQL */ `
+  subscription OnCreateTag {
+    onCreateTag {
       id
       name
-      description
-      logo {
-        bucket
-        region
-        key
-      }
-      text
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateTag = /* GraphQL */ `
+  subscription OnUpdateTag {
+    onUpdateTag {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteTag = /* GraphQL */ `
+  subscription OnDeleteTag {
+    onDeleteTag {
+      id
+      name
       createdAt
       updatedAt
     }

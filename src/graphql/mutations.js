@@ -1,61 +1,112 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createCases = /* GraphQL */ `
-  mutation CreateCases(
-    $input: CreateCasesInput!
-    $condition: ModelCasesConditionInput
+export const createCase = /* GraphQL */ `
+  mutation CreateCase(
+    $input: CreateCaseInput!
+    $condition: ModelCaseConditionInput
   ) {
-    createCases(input: $input, condition: $condition) {
+    createCase(input: $input, condition: $condition) {
       id
-      name
+      title
       description
-      logo {
-        bucket
-        region
-        key
-      }
+      variant
+      imgUrl
+      textPreview
       text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const updateCases = /* GraphQL */ `
-  mutation UpdateCases(
-    $input: UpdateCasesInput!
-    $condition: ModelCasesConditionInput
+export const updateCase = /* GraphQL */ `
+  mutation UpdateCase(
+    $input: UpdateCaseInput!
+    $condition: ModelCaseConditionInput
   ) {
-    updateCases(input: $input, condition: $condition) {
+    updateCase(input: $input, condition: $condition) {
       id
-      name
+      title
       description
-      logo {
-        bucket
-        region
-        key
-      }
+      variant
+      imgUrl
+      textPreview
       text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteCases = /* GraphQL */ `
-  mutation DeleteCases(
-    $input: DeleteCasesInput!
-    $condition: ModelCasesConditionInput
+export const deleteCase = /* GraphQL */ `
+  mutation DeleteCase(
+    $input: DeleteCaseInput!
+    $condition: ModelCaseConditionInput
   ) {
-    deleteCases(input: $input, condition: $condition) {
+    deleteCase(input: $input, condition: $condition) {
+      id
+      title
+      description
+      variant
+      imgUrl
+      textPreview
+      text
+      tags {
+        id
+        name
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createTag = /* GraphQL */ `
+  mutation CreateTag(
+    $input: CreateTagInput!
+    $condition: ModelTagConditionInput
+  ) {
+    createTag(input: $input, condition: $condition) {
       id
       name
-      description
-      logo {
-        bucket
-        region
-        key
-      }
-      text
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateTag = /* GraphQL */ `
+  mutation UpdateTag(
+    $input: UpdateTagInput!
+    $condition: ModelTagConditionInput
+  ) {
+    updateTag(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteTag = /* GraphQL */ `
+  mutation DeleteTag(
+    $input: DeleteTagInput!
+    $condition: ModelTagConditionInput
+  ) {
+    deleteTag(input: $input, condition: $condition) {
+      id
+      name
       createdAt
       updatedAt
     }
