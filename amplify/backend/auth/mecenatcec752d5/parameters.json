@@ -1,0 +1,69 @@
+{
+    "identityPoolName": "mecenatcec752d5_identitypool_cec752d5",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "mecenacec752d5",
+    "userPoolName": "mecenatcec752d5_userpool_cec752d5",
+    "autoVerifiedAttributes": [
+        "phone_number"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": "30",
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "userpoolClientLambdaRole": "mecenacec752d5_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "cec752d5",
+    "resourceName": "mecenatcec752d5",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "manual",
+    "userPoolGroupList": [
+        "Admin",
+        "Organizations"
+    ],
+    "dependsOn": [],
+    "thirdPartyAuth": true,
+    "authProviders": [],
+    "userPoolGroups": true,
+    "adminQueries": true,
+    "triggers": "{}",
+    "hostedUI": true,
+    "hostedUIDomainName": "mecenat",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://dev.mecenat.com.ua/login/confirm/\"],\"LogoutURLs\":[\"https://dev.mecenat.com.ua/login/logout/\"]}",
+    "adminQueryGroup": "Admin",
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": []
+}

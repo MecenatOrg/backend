@@ -1,0 +1,22 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-mecenat-dev-155511-authRole",
+            "UnauthRoleArn": "arn:aws:iam::109036629068:role/amplify-mecenat-dev-155511-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::109036629068:role/amplify-mecenat-dev-155511-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-mecenat-dev-155511-deployment",
+            "UnauthRoleName": "amplify-mecenat-dev-155511-unauthRole",
+            "StackName": "amplify-mecenat-dev-155511",
+            "StackId": "arn:aws:cloudformation:eu-west-1:109036629068:stack/amplify-mecenat-dev-155511/91578bd0-da3f-11ea-8c6f-0a21cd778562",
+            "AmplifyAppId": "d1rw7jy90t49rc"
+        },
+        "categories": {
+            "auth": {
+                "mecenatcec752d5": {
+                    "hostedUIProviderCreds": "[]"
+                }
+            }
+        }
+    }
+}

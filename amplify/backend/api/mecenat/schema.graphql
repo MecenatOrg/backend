@@ -1,0 +1,31 @@
+enum SIZE {
+   SMALL
+   MEDIUM
+   LARGE 
+}
+
+type Case @model 
+   @auth(rules: [
+      { allow: owner },
+      { allow: private, operations: [read] },
+      { allow: public, operations: [read] }
+  ]){
+  id: ID!
+  title: String!
+  description: String!
+  variant: SIZE
+  imgUrl: String!
+  textPreview: String!
+  text: String!
+  tags: [Tag]
+}
+
+type Tag @model 
+   @auth(rules: [
+      { allow: owner },
+      { allow: private, operations: [read] },
+      { allow: public, operations: [read] }
+  ]){
+  id: ID!
+  name: String!
+}
